@@ -1,0 +1,179 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Rob Howard",
+      "email": "savagesword@email.com"
+    },
+    {
+      "id": 2,
+      "name": "Howard Lovecraft",
+      "email": "cthulu@email.com"
+    },
+    {
+      "id": 3,
+      "name": "Ed Buroughs",
+      "email": "carter@email.com"
+    },
+    {
+      "email": "",
+      "fullName": "",
+      "isStaff": false,
+      "id": 4
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "Comics and Sequential Art",
+      "link": ""
+    },
+    {
+      "id": 2,
+      "title": "Figure Drawing for All Its Worth",
+      "link": ""
+    },
+    {
+      "id": 3,
+      "title": "Dynamic Figure Drawing",
+      "link": ""
+    },
+    {
+      "id": 4,
+      "title": "How to Draw Comics the Marvel Way",
+      "link": ""
+    },
+    {
+      "id": 5,
+      "title": "Wizard: How to Draw: The Best of Basic Training Vol: !",
+      "link": ""
+    }
+  ],
+  "assignments": [
+    {
+      "id": 1,
+      "title": "Three Panel Fairy Tale",
+      "reference-image": ""
+    },
+    {
+      "id": 2,
+      "title": "Trace, Copy, Rinse, Repeat!",
+      "reference-image": ""
+    },
+    {
+      "id": 3,
+      "title": "Warm Ups",
+      "reference-image": ""
+    },
+    {
+      "id": 4,
+      "title": "3 Step Action:AIF",
+      "reference-image": ""
+    },
+    {
+      "id": 5,
+      "title": "3 Panel Jokes",
+      "reference-image": ""
+    }
+  ],
+  "modules": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "Figure Drawing Fundamentals"
+
+
+    }, 
+    {
+      "id": 2,
+      "userId": 1,
+      "name": "Perspective"
+
+
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "name": "Getting Started"
+
+
+    }, 
+    {
+      "id": 4,
+      "userId": 2,
+      "name": "Trying to IMprove"
+
+
+    }
+  ],
+  "assignment-modules": [
+    {
+      "id": 1,
+      "assignmentId": 2, 
+      "moduleId": 1,
+      "userId": 1
+
+
+    },
+    {
+      "id": 2,
+      "assignmentId": 1, 
+      "moduleId": 2,
+      "userId": 1
+
+
+    },
+    {
+      "id": 3,
+      "assignmentId": 3, 
+      "moduleId": 1,
+      "userId": 2
+
+
+    },
+    {
+      "id": 4,
+      "assignmentId": 2, 
+      "moduleId": 2,
+      "userId": 2
+
+
+    }
+  ],
+  "book-modules": [
+    {
+      "id": 1, 
+      "bookId": 2, 
+      "moduleId": 1,
+      "userId": 1
+    },
+
+    {
+      "id": 2, 
+      "bookId": 4, 
+      "moduleId": 2,
+      "userId": 1
+    },
+    {
+      "id": 3, 
+      "bookId": 1, 
+      "moduleId": 1,
+      "userId": 2
+    },
+
+    {
+      "id": 4, 
+      "bookId": 3, 
+      "moduleId": 2,
+      "userId": 2
+    }
+  ],
+  "bulletinPosts": [
+    {
+      "id": 1, 
+      "userId": 1,
+      "timeStamp": "10:45", 
+      "message": "Look What I drew"
+    }
+  ]
+}
