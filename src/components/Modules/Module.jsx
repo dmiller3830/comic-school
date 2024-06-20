@@ -1,36 +1,37 @@
-import { useEffect } from "react"
-import { getModulesByUser } from "../../services/ModuleService.jsx"
+import { useEffect, useState } from "react"
+import { getAssignmentByUser } from "../../services/ModuleService.jsx"
 
+export const Module = ({moduleObj, moduleAssignment, moduleBook}) => {
 
-export const ModuleList = (currentUser) => {
-    const [ modules, setModules] = useState([])
+   const currentModuleAssignment = moduleAssignment.filter(assignment => assignment.moduleId === moduleObj.id) 
 
-    useEffect(() => {
-        getModulesByUser(currentUser.id).then(currentModule => {
-            setModules(currentModule)
-        })
-    })
-
-    return (
-
-        <div >
-        <h1>Modules </h1>
-        <ul>
-            {modules.map(moduleObj => {
-                return <div key={moduleObj.id}>
-               
-                    <li >
-                        <h2>{moduleObj.name}</h2>
-                       
-                    </li>
-
+   const currentModuleBook = moduleBook.filter(book => book.moduleId === moduleObj.id)
+    return(
+        <div>
+        <h2>{moduleObj.name}</h2>
+        <div>
+        assignment:
+            {currentModuleAssignment.map(singleAssignment =>{
+                return <>
                 
-             </div>
+             {singleAssignment.assignment?.title}
+                
+                
+                </>
             })}
-            </ul>   
+        
+        </div>
+        <div>
+            Book:
+            {currentModuleBook.map(singleBook => {
+                return<>
+                {singleBook.book.title}
+                
+                </>
+            })}
+        </div>
+        <button>Delete</button>
+    </div>
 
- </div>
-   
     )
-
 }

@@ -7,7 +7,8 @@ import { Register } from "../components/auth/Register.jsx"
 import { Dashboard } from "../components/dashboard/Dashboard.jsx"
 import { BookList } from "../components/Books/Books.jsx"
 import { AssignmentList } from "../components/Assignments/Assignments.jsx"
-import { ModuleList } from "../components/Modules/Module.jsx"
+import { ModuleList } from "../components/Modules/ModuleList.jsx"
+import { CreateModule } from "../components/Modules/CreateModule.jsx"
 // import { AddBook } from "../components/Add And Create/AddBook.jsx"
 
 
@@ -16,15 +17,28 @@ export const ApplicationViews = () => {
   
   
   useEffect(() => {
-    const localHoneyUser = localStorage.getItem("honey_user")
-    const honeyUserObj = JSON.parse(localHoneyUser)
+    const localcomicUser = localStorage.getItem("comic_user")
+    const comicUserObj = JSON.parse(localcomicUser)
   
-    setCurrentUser(honeyUserObj)
+    setCurrentUser(comicUserObj)
   }, [])
   
     return <>
 
     <Routes>
+
+    <Route 
+        index element={<Welcome></Welcome>}/>
+
+<Route path="login">
+                    <Route index element={<Login />} />
+                </Route>
+
+                <Route path="register">
+                    <Route index element={<Register />} />
+                </Route>
+      
+      
         <Route
             path="/" element={<>
             <NavBar />
@@ -34,13 +48,7 @@ export const ApplicationViews = () => {
         }>
         <Route 
         index element={<Welcome></Welcome>}/>
-      <Route path="login">
-                    <Route index element={<Login />} />
-                </Route>
-
-                <Route path="register">
-                    <Route index element={<Register />} />
-                </Route>
+      
 
                 <Route path="dashboard">
                     <Route index element={<Dashboard />}/>
@@ -48,17 +56,18 @@ export const ApplicationViews = () => {
                 </Route>
 
                 <Route path="books">
-                <Route index element ={<BookList currentUser={currentUser}/>}/>  
+                <Route index element={<BookList currentUser={currentUser}/>}/>  
         </Route>
 
         <Route path="assignments">
-                <Route index element ={<AssignmentList currentUser={currentUser}/>}/>  
+                <Route index element={<AssignmentList currentUser={currentUser}/>}/>  
         </Route> 
 
          {/* <Route path="addtomodule" element={<AddBook currentUser={currentUser}/>}/>   */}
 
-         <Route path="module">
-               <Route index element ={<ModuleList currentUser={currentUser}/>}/>
+         <Route path="modules">
+               <Route index element={<ModuleList currentUser={currentUser}/>}/>
+               <Route path="create" element={<CreateModule currentUser={currentUser}/>}/>
          </Route>
 
 

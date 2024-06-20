@@ -1,0 +1,49 @@
+.modules {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 3rem; 
+
+}
+
+.modules > * {
+    flex-basis: 31%;
+    margin: 0.5rem;
+
+
+}
+
+.module {
+    background-color: var(--white);
+    border: 1px solid var(--outline);
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+}
+
+section.module {
+    margin: 3rem
+
+}
+
+.module-info {
+    color: var(--info);
+    font-family: "Roboto", sans-serif;
+
+}
+
+.module-footer {
+    margin: 1rem 0 0.25rem 0;
+    font-style: oblique;
+
+}
+
+.module-header {
+    font-size: larger;
+    font-weight: 700;
+    line-height: 3rem;
+    color: var(--primary);
+
+
+}

@@ -18,14 +18,13 @@ export const Login = () => {
         if (foundUsers.length === 1) {
           const user = foundUsers[0]
           localStorage.setItem(
-            "honey_user",
+            "comic_user",
             JSON.stringify({
               id: user.id,
-              isStaff: user.isStaff,
             })
           )
   
-          navigate("/")
+          navigate("/dashboard")
         } else {
           window.alert("Invalid login")
         }
@@ -53,7 +52,8 @@ export const Login = () => {
             </fieldset>
             <fieldset>
               <div className="form-group">
-                <button className="login-btn btn-info" type="submit">
+                <button className="login-btn btn-info" 
+                type="submit">
                   Sign in
                 </button>
               </div>
