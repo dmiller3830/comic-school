@@ -28,7 +28,7 @@ export const BookList = () => {
                     <li >
                         <h2>{bookObj.title}</h2>
                         <button
-                        // onClick={() => {navigate("/addtomodule")}}
+                        // navigate to the add book component
                     
                     >Add</button>
                     </li>

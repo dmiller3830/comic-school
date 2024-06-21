@@ -19,3 +19,15 @@ export const getAssignmentByUser = (userId) => {
 export const getBookByUser = (userId) => {
     return fetch(`http://localhost:8088/book-modules?userId=${userId}&_expand=book`).then((response) => response.json())
 }
+
+export const getModuleById = (userId) => {
+    return fetch(`http://localhost:8088/modules/${userId}`).then((response) => response.json())
+}
+
+export const getBooksByModule = (userId) => {
+    return fetch(` http://localhost:8088/book-modules?userId=${userId}&_expand=book  `).then((response) => response.json())
+}
+
+export const getAssignmentsByModule = (userId) => {
+    return fetch(`http://localhost:8088/assignment-modules?userId=${userId}&_expand=assignment`).then((response) => response.json())
+}

@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react"
 import { getAssignmentByUser } from "../../services/ModuleService.jsx"
+import { useNavigate } from "react-router-dom"
 
-export const Module = ({moduleObj, moduleAssignment, moduleBook}) => {
+export const Module = ({moduleObj, moduleAssignment, moduleBook, currentUser}) => {
 
-   const currentModuleAssignment = moduleAssignment.filter(assignment => assignment.moduleId === moduleObj.id) 
+        const currentModuleAssignment = moduleAssignment.filter(assignment => assignment.moduleId === moduleObj.id) 
 
-   const currentModuleBook = moduleBook.filter(book => book.moduleId === moduleObj.id)
-    return(
+         const currentModuleBook = moduleBook.filter(book => book.moduleId === moduleObj.id)
+   
+const navigate = useNavigate()
+   
+   
+   return(
         <div>
         <h2>{moduleObj.name}</h2>
         <div>
@@ -30,7 +35,14 @@ export const Module = ({moduleObj, moduleAssignment, moduleBook}) => {
                 </>
             })}
         </div>
-        <button>Delete</button>
+        <div>
+        <button
+            onClick={() => {navigate(`${currentUser.id}`)}}>
+                Details
+            </button>
+        </div>
+        
+      
     </div>
 
     )

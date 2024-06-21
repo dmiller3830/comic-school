@@ -24,7 +24,10 @@ export const AssignmentList = () => {
                
                     <li >
                         <h2>{assignmentObj.title}</h2>
-                        <button>Add</button>
+                        <button
+                        //navigate to the add assignment component
+                        
+                        >Add</button>
                     </li>
 
                 

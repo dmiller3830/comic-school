@@ -7,18 +7,18 @@ import { createUser, getUserByEmail } from "../../services/UserService.jsx"
 
 
 export const Register = (props) => {
-    const [customer, setCustomer] = useState({
+    const [user, setUser] = useState({
       email: "",
-      fullName: "",
+      name: "",
       isStaff: false,
     })
     let navigate = useNavigate()
   
     const registerNewUser = () => {
-      createUser(customer).then((createdUser) => {
+      createUser(user).then((createdUser) => {
         if (createdUser.hasOwnProperty("id")) {
           localStorage.setItem(
-            "honey_user",
+            "comic_user",
             JSON.stringify({
               id: createdUser.id,
               staff: createdUser.isStaff,
@@ -32,7 +32,7 @@ export const Register = (props) => {
   
     const handleRegister = (e) => {
       e.preventDefault()
-      getUserByEmail(customer.email).then((response) => {
+      getUserByEmail(user.email).then((response) => {
         if (response.length > 0) {
           // Duplicate email. No good.
           window.alert("Account with that email address already exists")
@@ -43,26 +43,55 @@ export const Register = (props) => {
       })
     }
   
-    // const updateCustomer = (evt) => {
-    //   const copy = { ...customer }
-    //   copy[evt.target.id] = evt.target.value
-    //   setCustomer(copy)
-    // }
+    const updateUser = (evt) => {
+      const copy = { ...user }
+      copy[evt.target.id] = evt.target.value
+      setUser(copy)
+    }
   
     return (
-      <main style={{ textAlign: "center" }}>
-      <form className="form-login" onSubmit={handleRegister}>
+      <main 
+      style={{ textAlign: "center" }}>
+      <form 
+      className="form-login" 
+      onSubmit={handleRegister}>
         <h1>Comic School</h1>
         <h2>Please Register</h2>
        
        
         
         <fieldset>
+          <input
+          type="text"
+          id="name"
+          onChange={updateUser}
+          className="form-control"
+          placeholder="Name"
+          required
+          autoFocus>
+            
+          
+          </input>
+         
+          <input
+          type="email"
+          id="email"
+          onChange={updateUser}
+          className="form-control"
+          placeholder="Email address"
+          required
+          autoFocus>
+          
+          </input>
+         
           <div className="form-group">
-            <button className="login-btn btn-info" type="submit">
+            <button 
+            className="login-btn btn-info" 
+            type="submit">
               Register
             </button>
           </div>
+          
         </fieldset>
       </form>
     </main>

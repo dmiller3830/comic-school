@@ -16,9 +16,9 @@
       "email": "carter@email.com"
     },
     {
-      "email": "",
-      "fullName": "",
+      "email": "omegaman@mail.com",
       "isStaff": false,
+      "name": "Dan MIller",
       "id": 4
     }
   ],

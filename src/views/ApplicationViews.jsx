@@ -9,7 +9,7 @@ import { BookList } from "../components/Books/Books.jsx"
 import { AssignmentList } from "../components/Assignments/Assignments.jsx"
 import { ModuleList } from "../components/Modules/ModuleList.jsx"
 import { CreateModule } from "../components/Modules/CreateModule.jsx"
-// import { AddBook } from "../components/Add And Create/AddBook.jsx"
+import { ModuleDetails } from "../components/Modules/ModulesDetails.jsx"
 
 
 export const ApplicationViews = () => {
@@ -35,7 +35,7 @@ export const ApplicationViews = () => {
                 </Route>
 
                 <Route path="register">
-                    <Route index element={<Register />} />
+                    <Route index element={<Register/>} />
                 </Route>
       
       
@@ -68,6 +68,7 @@ export const ApplicationViews = () => {
          <Route path="modules">
                <Route index element={<ModuleList currentUser={currentUser}/>}/>
                <Route path="create" element={<CreateModule currentUser={currentUser}/>}/>
+               <Route path=":userId" element={<ModuleDetails/> } />
          </Route>
 
 
