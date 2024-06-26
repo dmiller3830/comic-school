@@ -76,6 +76,43 @@
       "reference-image": ""
     }
   ],
+
+  "resources": [
+
+    {
+      "id": 1,
+      "name":"" , 
+      "link": ""
+    }, 
+
+    
+    {
+      "id": 2,
+      "name": "", 
+      "link":""
+    }, 
+
+    {
+      "id": 3,
+      "name": "", 
+      "link": ""
+    }, 
+
+    
+    {
+      "id": 4,
+      "name": "", 
+      "link": ""
+    }, 
+
+    {
+      "id": 5,
+      "name":"" , 
+      "link": ""
+    }
+
+],
+
   "modules": [
     {
       "id": 1,
@@ -190,6 +227,18 @@
       "userId": 2
     }
   ],
+
+  "resource-modules": [
+ 
+    {
+      "id": 1,
+      "resourceId": "",
+      "moduleId": "", 
+      "userId": 1
+    }
+
+    ], 
+
   "bulletinPosts": [
     {
       "id": 1,

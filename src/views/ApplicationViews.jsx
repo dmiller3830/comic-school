@@ -12,6 +12,7 @@ import { CreateModule } from "../components/Modules/CreateModule.jsx"
 import { ModuleDetails } from "../components/Modules/ModulesDetails.jsx"
 import { AddBookList } from "../components/Books/AddBookList.jsx"
 import { AddAssignmentList } from "../components/Assignments/AddAssignmentAssignmentLIst.jsx"
+import { AddResourceList } from "../components/Resources/AddResourcesList.jsx"
 
 
 export const ApplicationViews = () => {
@@ -81,6 +82,7 @@ export const ApplicationViews = () => {
 
         <Route path="addassignments/:moduleId" element={<AddAssignmentList currentUser={currentUser}/>}/>
         
+        <Route path="addresources/:moduleId" element = {<AddResourceList currentUser={currentUser}/>}/>
         
         </Route>
 
