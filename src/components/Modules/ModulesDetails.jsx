@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-import {  getAssignmentsByModule, getBooksByModule, getModuleById } from "../../services/ModuleService.jsx";
+import {  getAssignmentByModule, getAssignmentByUser, getBookByUser, getBookbyModule, getModuleById } from "../../services/ModuleService.jsx";
+import { deleteBook } from "../../services/BookService.jsx";
+import { BookModule } from "./BookModule.jsx";
+import { AssignmentModule } from "./AssignmentModule.jsx";
 
 
 
@@ -8,35 +11,46 @@ import {  getAssignmentsByModule, getBooksByModule, getModuleById } from "../../
 export const ModuleDetails = () => {
 
     const [moduleDetails, setModuleDetails] = useState({});
+    const [userBooks, setUserBooks] = useState([]);
+    const [userAssignments, setUserAssignments] = useState([]);
     const {userId} = useParams();
-    const [bookDetails, setBookDetails] = useState({});
-    const [assignmentDetails, setAssignmentDetails] = useState({})
+    const {moduleId} = useParams();
+
+  
   
 
     useEffect(() => {
 
-        getModuleById(userId).then(singleModule => {
+        getModuleById(moduleId).then(singleModule => {
             setModuleDetails(singleModule);
 
         })
 
     }, [] )
 
+    const getAndSetBooks = () => {
+        getBookbyModule(moduleId).then(booksArray => {
+            setUserBooks(booksArray);
 
+        })
+
+    }
 
     useEffect(() => {
 
-        getBooksByModule(userId).then(singleBook => {
-            setBookDetails(singleBook);
+        getAndSetBooks()
+    }, [] )
+
+    const getAndSetAssignments = () => {
+        getAssignmentByModule(moduleId).then(assignmentArray => {
+            setUserAssignments(assignmentArray);
         })
-    },[])
+    }
 
     useEffect(() => {
+      getAndSetAssignments()
 
-        getAssignmentsByModule(userId).then(singleAssignment => {
-            setAssignmentDetails(singleAssignment);
-        })
-    },[])
+    }, [] )
 
   
 
@@ -46,32 +60,51 @@ export const ModuleDetails = () => {
         <>
 
         <div>
-       
-       
         <h1>{moduleDetails.name}</h1>
-
-        <h3>Books:{bookDetails.book}
-        </h3>
-        <h3>Assignments{assignmentDetails.assignment}
-        </h3>
-        
+     <h3>Books:</h3>
+     <ul>
+        <div>
+           
+        {userBooks.map((userBook) => {
+           return <BookModule key={userBook.id} userBook={userBook} getAndSetBooks={getAndSetBooks}/> })}
       
-      
-      
-       <button>
-        Add Book
-       </button>
-       
-        <button>
-        Add Assignment
-       </button>
         </div>
-
-
        
-        </>
+     </ul>
+       
+       
+       
+        <h3>Assignments:</h3>
+        <ul>
+        {userAssignments.map((userAssignment) => {
+           return <AssignmentModule key={userAssignment.id} userAssignment={userAssignment} getAndSetAssignments={getAndSetAssignments}/>
+        })}
+       
+     </ul>
 
-
-        )
     
-}
+
+        <h3>Resources:</h3>
+        <ul>
+            
+
+
+        </ul>
+
+
+        <button
+            onClick={() => {navigate(`/addbooks/${moduleId}`,)}}
+             >Add Book</button>
+       <button
+       onClick={() => {navigate(`/addassignments/${moduleId}`)}}
+       >Add Assignment</button>
+
+       <button>
+        Add Resource
+       </button>
+
+    
+        
+        </div>
+        </>
+        )}

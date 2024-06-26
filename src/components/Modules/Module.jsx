@@ -1,19 +1,31 @@
 import { useEffect, useState } from "react"
-import { getAssignmentByUser } from "../../services/ModuleService.jsx"
+import { getAssignmentByUser, getModulesByUser } from "../../services/ModuleService.jsx"
 import { useNavigate } from "react-router-dom"
+import { ModuleDelete } from "./DeleteModule.jsx"
 
-export const Module = ({moduleObj, moduleAssignment, moduleBook, currentUser}) => {
-
+export const Module = ({moduleObj, moduleAssignment, moduleBook, currentUser, setModules}) => {
+       
+    const [userModules, setUserModules] = useState([])
         const currentModuleAssignment = moduleAssignment.filter(assignment => assignment.moduleId === moduleObj.id) 
-
-         const currentModuleBook = moduleBook.filter(book => book.moduleId === moduleObj.id)
-   
-const navigate = useNavigate()
-   
-   
+        const currentModuleBook = moduleBook.filter(book => book.moduleId === moduleObj.id)
+        const navigate = useNavigate()
+       
+       
+        const getAndSetModule = () => {
+        getModulesByUser(moduleObj).then(modulesArray => {
+        setUserModules(modulesArray);
+    })
+}
+// useEffect(() => {
+//     getAndSetModule()
+// })
    return(
         <div>
-        <h2>{moduleObj.name}</h2>
+        <h2>{moduleObj.name}
+      
+        <ModuleDelete key={moduleObj.id} moduleObj={moduleObj} getAndSetModule={getAndSetModule} setModules={setModules} currentUser={currentUser}/>
+        
+        </h2>
         <div>
         assignment:
             {currentModuleAssignment.map(singleAssignment =>{
@@ -37,9 +49,10 @@ const navigate = useNavigate()
         </div>
         <div>
         <button
-            onClick={() => {navigate(`${currentUser.id}`)}}>
+            onClick={() => {navigate(`${moduleObj.id}`)}}>
                 Details
             </button>
+          
         </div>
         
       

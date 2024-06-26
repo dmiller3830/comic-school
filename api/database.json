@@ -45,7 +45,7 @@
     },
     {
       "id": 5,
-      "title": "Wizard: How to Draw: The Best of Basic Training Vol: !",
+      "title": "Wizard: How to Draw: The Best of Basic Training Vol: 1",
       "link": ""
     }
   ],
@@ -93,85 +93,75 @@
       "name": "Getting Started"
     },
     {
-      "id": 2,
+      "id": 3,
       "userId": 2,
       "name": "Trying to IMprove"
     },
     {
       "userId": 1,
       "name": "Page Design",
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "name": "Composition",
       "id": 4
     },
     {
       "userId": 1,
       "name": "Anatomy",
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "name": "Character Design",
       "id": 6
     },
     {
       "userId": 1,
-      "name": "Facial Expressions",
+      "name": "Character Design",
       "id": 7
     },
     {
       "userId": 1,
-      "name": "Folds and Drapery",
+      "name": "Facial Expressions",
       "id": 8
     },
     {
       "userId": 1,
       "name": "Dynamic Poses",
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "name": "Story Graphics",
       "id": 10
     },
     {
       "userId": 1,
-      "name": "Inventive Drawing",
+      "name": "Story Graphics",
       "id": 11
     },
     {
       "userId": 1,
-      "name": "Test Test Test",
+      "name": "Inventive Drawing",
       "id": 12
+    },
+    {
+      "userId": 1,
+      "name": "Test Test Test",
+      "id": 13
     }
   ],
   "assignment-modules": [
     {
-      "id": 1,
-      "assignmentId": 2,
-      "moduleId": 1,
-      "userId": 1
-    },
-    {
-      "id": 1,
+      "id": 2,
       "assignmentId": 1,
       "moduleId": 2,
       "userId": 1
     },
     {
-      "id": 1,
+      "id": 3,
       "assignmentId": 3,
-      "moduleId": 1,
+      "moduleId": 3,
       "userId": 2
     },
     {
-      "id": 1,
+      "id": 4,
       "assignmentId": 2,
-      "moduleId": 2,
+      "moduleId": 4,
       "userId": 2
+    },
+    {
+      "userId": 1,
+      "assignmentId": 3,
+      "moduleId": "1",
+      "id": 5
     }
   ],
   "book-modules": [
@@ -188,15 +178,15 @@
       "userId": 1
     },
     {
-      "id": 1,
+      "id": 3,
       "bookId": 1,
-      "moduleId": 1,
+      "moduleId": 3,
       "userId": 2
     },
     {
-      "id": 2,
+      "id": 4,
       "bookId": 3,
-      "moduleId": 2,
+      "moduleId": 4,
       "userId": 2
     }
   ],

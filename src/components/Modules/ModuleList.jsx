@@ -46,7 +46,8 @@ export const ModuleList = ({currentUser}) => {
             return<> <Module moduleObj={moduleObj}
             currentUser={currentUser}
             moduleAssignment={moduleAssignment}
-            moduleBook={moduleBook}/></>
+            moduleBook={moduleBook}
+            setModules={setModules} /></>
 
           
            

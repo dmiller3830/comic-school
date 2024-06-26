@@ -27,10 +27,7 @@ export const BookList = () => {
                
                     <li >
                         <h2>{bookObj.title}</h2>
-                        <button
-                        // navigate to the add book component
-                    
-                    >Add</button>
+                       
                     </li>
 
                 

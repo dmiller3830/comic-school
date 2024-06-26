@@ -10,6 +10,8 @@ import { AssignmentList } from "../components/Assignments/Assignments.jsx"
 import { ModuleList } from "../components/Modules/ModuleList.jsx"
 import { CreateModule } from "../components/Modules/CreateModule.jsx"
 import { ModuleDetails } from "../components/Modules/ModulesDetails.jsx"
+import { AddBookList } from "../components/Books/AddBookList.jsx"
+import { AddAssignmentList } from "../components/Assignments/AddAssignmentAssignmentLIst.jsx"
 
 
 export const ApplicationViews = () => {
@@ -56,7 +58,9 @@ export const ApplicationViews = () => {
                 </Route>
 
                 <Route path="books">
-                <Route index element={<BookList currentUser={currentUser}/>}/>  
+                <Route index element={<BookList currentUser={currentUser}/>}/> 
+                
+                
         </Route>
 
         <Route path="assignments">
@@ -68,9 +72,20 @@ export const ApplicationViews = () => {
          <Route path="modules">
                <Route index element={<ModuleList currentUser={currentUser}/>}/>
                <Route path="create" element={<CreateModule currentUser={currentUser}/>}/>
-               <Route path=":userId" element={<ModuleDetails/> } />
+               <Route path=":moduleId" element={<ModuleDetails/> } />
          </Route>
+        
+        
+         <Route path="addbooks/:moduleId" element={<AddBookList currentUser={currentUser}/>}/>
 
+
+        <Route path="addassignments/:moduleId" element={<AddAssignmentList currentUser={currentUser}/>}/>
+        
+        
+        </Route>
+
+        <Route path="resources">
+        
 
         </Route>
 

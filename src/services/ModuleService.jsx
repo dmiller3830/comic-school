@@ -24,10 +24,17 @@ export const getModuleById = (userId) => {
     return fetch(`http://localhost:8088/modules/${userId}`).then((response) => response.json())
 }
 
-export const getBooksByModule = (userId) => {
-    return fetch(` http://localhost:8088/book-modules?userId=${userId}&_expand=book  `).then((response) => response.json())
+export const getBookbyModule = (moduleId) => {
+    return fetch(`http://localhost:8088/book-modules?moduleId=${moduleId}&_expand=book`).then((response) => response.json())
 }
 
-export const getAssignmentsByModule = (userId) => {
-    return fetch(`http://localhost:8088/assignment-modules?userId=${userId}&_expand=assignment`).then((response) => response.json())
+export const getAssignmentByModule = (moduleId) => {
+    return fetch(`http://localhost:8088/assignment-modules?moduleId=${moduleId}&_expand=assignment`).then((response) => response.json())
+}
+
+export const DeleteModule = (id) => {
+    return fetch(`http://localhost:8088/modules/${id}`, {
+        method: "DELETE", 
+    })
+
 }

@@ -52,6 +52,15 @@ export const NavBar = () => {
             
         </li>
 
+        <li className="navbar-item">
+            <Link
+            to='/resources'>
+                 Resources
+            </Link>
+           
+            
+        </li>
+
         {localStorage.getItem("honey_user") ? (
 <li className="navbar-item navbar-logout">
 <Link
