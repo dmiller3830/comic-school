@@ -1,0 +1,1 @@
+//fetchcalls for the database in regards to bulletin posts

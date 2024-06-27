@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
-import {  getAssignmentByModule, getAssignmentByUser, getBookByUser, getBookbyModule, getModuleById } from "../../services/ModuleService.jsx";
+import {  getAssignmentByModule, getAssignmentByUser, getBookByUser, getBookbyModule, getModuleById, getResourceByModule } from "../../services/ModuleService.jsx";
 import { deleteBook } from "../../services/BookService.jsx";
 import { BookModule } from "./BookModule.jsx";
 import { AssignmentModule } from "./AssignmentModule.jsx";
+import { ResourceModule } from "./ResourceModule.jsx";
 
 
 
@@ -13,6 +14,7 @@ export const ModuleDetails = () => {
     const [moduleDetails, setModuleDetails] = useState({});
     const [userBooks, setUserBooks] = useState([]);
     const [userAssignments, setUserAssignments] = useState([]);
+    const [userResources, setUserResources] = useState([])
     const {userId} = useParams();
     const {moduleId} = useParams();
 
@@ -52,6 +54,17 @@ export const ModuleDetails = () => {
 
     }, [] )
 
+    const getAndSetResources = () => {
+        getResourceByModule(moduleId).then(resourcesArray => {
+            setUserResources(resourcesArray);
+
+        })
+    }
+
+    useEffect(() => {
+        getAndSetResources()
+    },[])
+
   
 
     const navigate = useNavigate()
@@ -86,10 +99,13 @@ export const ModuleDetails = () => {
 
         <h3>Resources:</h3>
         <ul>
+            <ul>
+                {userResources.map((userResource) => {
+                    return <ResourceModule key={userResource.id} userResource={userResource} getAndSetResources={getAndSetResources}/>
+                })}
+            </ul>
             
-
-
-        </ul>
+     </ul>
 
 
         <button
@@ -99,7 +115,8 @@ export const ModuleDetails = () => {
        onClick={() => {navigate(`/addassignments/${moduleId}`)}}
        >Add Assignment</button>
 
-       <button>
+       <button
+       onClick={() => {navigate(`/addresources/${moduleId}`)}}>
         Add Resource
        </button>
 

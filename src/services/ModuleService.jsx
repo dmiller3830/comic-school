@@ -38,3 +38,11 @@ export const DeleteModule = (id) => {
     })
 
 }
+
+export const getResourceByModule = (moduleId) => {
+    return fetch(`http://localhost:8088/resource-modules?moduleId=${moduleId}&_expand=resource`).then((response) => response.json())
+}
+
+//export const getResourceByUser = () => {
+    
+//}

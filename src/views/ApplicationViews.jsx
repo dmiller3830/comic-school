@@ -13,6 +13,7 @@ import { ModuleDetails } from "../components/Modules/ModulesDetails.jsx"
 import { AddBookList } from "../components/Books/AddBookList.jsx"
 import { AddAssignmentList } from "../components/Assignments/AddAssignmentAssignmentLIst.jsx"
 import { AddResourceList } from "../components/Resources/AddResourcesList.jsx"
+import { ResourceList } from "../components/Resources/Resources.jsx"
 
 
 export const ApplicationViews = () => {
@@ -76,20 +77,24 @@ export const ApplicationViews = () => {
                <Route path=":moduleId" element={<ModuleDetails/> } />
          </Route>
         
+         
         
-         <Route path="addbooks/:moduleId" element={<AddBookList currentUser={currentUser}/>}/>
+        
+        <Route path="addbooks/:moduleId" element={<AddBookList currentUser={currentUser}/>}/>
 
 
         <Route path="addassignments/:moduleId" element={<AddAssignmentList currentUser={currentUser}/>}/>
         
+       
         <Route path="addresources/:moduleId" element = {<AddResourceList currentUser={currentUser}/>}/>
         
-        </Route>
-
         <Route path="resources">
-        
+        <Route index element={<ResourceList currentUser={currentUser}/>}/>
 
         </Route>
+
+       
+         </Route>
 
         
 
