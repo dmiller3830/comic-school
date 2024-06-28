@@ -5,7 +5,7 @@ import { deleteBook } from "../../services/BookService.jsx";
 import { BookModule } from "./BookModule.jsx";
 import { AssignmentModule } from "./AssignmentModule.jsx";
 import { ResourceModule } from "./ResourceModule.jsx";
-
+import "./Module.css"
 
 
 
@@ -72,22 +72,22 @@ export const ModuleDetails = () => {
     return (
         <>
 
-        <div>
-        <h1>{moduleDetails.name}</h1>
-     <h3>Books:</h3>
-     <ul>
-        <div>
+        <div className="container-module">
+        <h1 className="module-header">{moduleDetails.name}</h1>
+     <h2 className="modules">Books:</h2>
+     <div>
+        <div className="section-module">
            
         {userBooks.map((userBook) => {
            return <BookModule key={userBook.id} userBook={userBook} getAndSetBooks={getAndSetBooks}/> })}
       
         </div>
        
-     </ul>
+     </div>
        
        
        
-        <h3>Assignments:</h3>
+        <h2 className="modules">Assignments:</h2>
         <ul>
         {userAssignments.map((userAssignment) => {
            return <AssignmentModule key={userAssignment.id} userAssignment={userAssignment} getAndSetAssignments={getAndSetAssignments}/>
@@ -97,7 +97,7 @@ export const ModuleDetails = () => {
 
     
 
-        <h3>Resources:</h3>
+        <h2 className="modules">Resources:</h2>
         <ul>
             <ul>
                 {userResources.map((userResource) => {

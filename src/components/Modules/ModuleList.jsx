@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { getAssignmentByUser, getBookByUser, getModulesByUser } from "../../services/ModuleService.jsx"
 import { Navigate, useNavigate } from "react-router-dom"
 import { Module } from "./Module.jsx"
+import "./Module.css"
 
 
 export const ModuleList = ({currentUser}) => {
@@ -40,7 +41,7 @@ export const ModuleList = ({currentUser}) => {
 
     return (
 
-        <div className="modules">
+        <div className="module-header">
         <h1>Modules </h1>
         {modules.map(moduleObj => {
             return<> <Module moduleObj={moduleObj}

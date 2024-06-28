@@ -13,8 +13,8 @@ export const AssignmentModule =({userAssignment, getAndSetAssignments}) => {
     
    
    
-   return <li>{userAssignment?.assignment?.title}
+   return <div className="modules">{userAssignment?.assignment?.title}
     <button
     onClick={handlesAssignmentDelete}>Delete</button>
-    </li>
+    </div>
 }

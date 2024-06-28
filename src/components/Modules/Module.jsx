@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { getAssignmentByUser, getModulesByUser } from "../../services/ModuleService.jsx"
 import { useNavigate } from "react-router-dom"
 import { ModuleDelete } from "./DeleteModule.jsx"
+import "./Module.css"
 
 export const Module = ({moduleObj, moduleAssignment, moduleBook, currentUser, setModules}) => {
        
@@ -20,13 +21,13 @@ export const Module = ({moduleObj, moduleAssignment, moduleBook, currentUser, se
 //     getAndSetModule()
 // })
    return(
-        <div>
-        <h2>{moduleObj.name}
+        <div className="module-header">
+        <h2 className="modules">{moduleObj.name}
       
         <ModuleDelete key={moduleObj.id} moduleObj={moduleObj} getAndSetModule={getAndSetModule} setModules={setModules} currentUser={currentUser}/>
         
         </h2>
-        <div>
+        <div className="module-info">
         assignment:
             {currentModuleAssignment.map(singleAssignment =>{
                 return <>
@@ -38,7 +39,7 @@ export const Module = ({moduleObj, moduleAssignment, moduleBook, currentUser, se
             })}
         
         </div>
-        <div>
+        <div className="module-info">
             Book:
             {currentModuleBook.map(singleBook => {
                 return<>

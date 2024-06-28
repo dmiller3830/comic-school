@@ -256,6 +256,20 @@
       "resourceId": 3,
       "moduleId": 1,
       "userId": 1
+    },
+    {
+      "userId": 1,
+      "bookId": 0,
+      "moduleId": "1",
+      "resourceId": 4,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "bookId": 0,
+      "moduleId": "1",
+      "resourceId": 1,
+      "id": 5
     }
   ],
   "bulletinPosts": [
@@ -265,45 +279,34 @@
       "timeStamp": "10:45",
       "message": "Look What I drew",
       "Image": ""
-      
     },
-
     {
       "id": 2,
       "userId": 1,
       "timeStamp": "9:00",
       "message": "Attempt at Anatomy",
       "Image": ""
-      
     },
-
     {
       "id": 3,
       "userId": 1,
       "timeStamp": "5:00",
       "message": "Box Practice",
       "Image": ""
-      
     },
-
     {
       "id": 4,
       "userId": 2,
       "timeStamp": "3:00",
       "message": "Improvement",
       "Image": ""
-      
     },
-
     {
       "id": 5,
       "userId": 2,
       "timeStamp": "11:15",
       "message": "Getting Better",
       "Image": ""
-      
     }
-
-
   ]
 }

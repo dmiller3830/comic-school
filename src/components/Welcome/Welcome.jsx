@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import "./Welcome.css"
 
 
 export const Welcome = () => {
@@ -8,9 +9,13 @@ export const Welcome = () => {
 
         <h1>
             
-     <span>Welcome to 
+     <span>  Welcome to
+
+        <div>
     
-         <span>Comics School</span>
+         <span >Comics School</span>
+
+         </div>
             
     </span>
         

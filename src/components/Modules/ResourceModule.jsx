@@ -9,10 +9,10 @@ export const  ResourceModule = ({userResource, getAndSetResources}) => {
         getAndSetResources()
             })
         }
- return <li key={userResource.id}>{userResource?.resource?.name}
+ return <div className="modules" key={userResource.id}>{userResource?.resource?.name}
  <button
  onClick={handleResourceDelete}>Delete</button>
- </li>
+ </div>
     
     
     

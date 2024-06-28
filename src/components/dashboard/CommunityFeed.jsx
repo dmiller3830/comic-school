@@ -1,1 +1,0 @@
-//the main code for the community bulliton board that shows posts from everyone on the app. 

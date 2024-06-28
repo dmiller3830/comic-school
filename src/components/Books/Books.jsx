@@ -20,16 +20,16 @@ export const BookList = () => {
     // const navigate = useNavigate()
    return (
 
-    <div className="books">
+    <div className="book-header">
         <h1>Books </h1>
         <ul>
             {books.map(bookObj => {
                 return <div key={bookObj.id}>
                
-                    <li >
-                        <h2>{bookObj.title}</h2>
-                       
-                    </li>
+                    <div >
+                        <h2 className="section.book">{bookObj.title}</h2>
+                       <h3 className="book-info">Description of Book goes here</h3>
+                    </div>
 
                 
              </div>

@@ -14,16 +14,17 @@ export const ResourceList = () => {
     },[])
 
     return (
-        <div className="resources">
+        <div className="resource-header">
             <h1>Resources </h1>
             <ul>
                 {resources.map(resourceObj => {
                     return <div key={resourceObj.id}>
 
-                    <li>
-                        <h2>{resourceObj.name}</h2>
+                    <div>
+                        <h2 className="resource">{resourceObj.name}</h2>
+                        <h3 className="resource-info">Description of Resource Goes here</h3>
 
-                    </li>
+                    </div>
 
 
                     </div>

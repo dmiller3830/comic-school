@@ -1,5 +1,5 @@
 import { deleteBook } from "../../services/BookService.jsx"
-
+import "./Module.css"
 
 
 export const BookModule = ({userBook, getAndSetBooks}) => {
@@ -15,10 +15,10 @@ export const BookModule = ({userBook, getAndSetBooks}) => {
    
    
    
-   return <li key={userBook.id}>{userBook?.book?.title}
+   return <div className="modules" key={userBook.id}>{userBook?.book?.title}
     <button
     onClick={handleBookDelete}>Delete</button>
-    </li>
+    </div>
 
 
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { getAllAssignments } from "../../services/AssignmentService.jsx"
-
+import "./Assignments.css"
 
 
 
@@ -16,16 +16,16 @@ export const AssignmentList = () => {
 
     return (
 
-<div >
-        <h1>Assignments </h1>
+<div className="assignment-header" >
+        <h1 >Assignments </h1>
         <ul>
             {assignments.map(assignmentObj => {
                 return <div key={assignmentObj.id}>
                
-                    <li >
-                        <h2>{assignmentObj.title}</h2>
-                        
-                    </li>
+                    <div>
+                        <h2 className="section.assignment">{assignmentObj.title}</h2>
+                        <h3 className="assignment-info">Description of Assignment goes Here</h3>
+                    </div>
 
                 
              </div>

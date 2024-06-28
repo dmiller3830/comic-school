@@ -11,17 +11,17 @@ export const NavBar = () => {
 
     return <ul className="navbar">
         
-
+    
     <li className="navbar-item">
 
-            <Link to='/dashboard'>
+            <Link to='/dashboard' className="navbar-link">
                 DashBoard
             </Link>
     </li>
 
     <li className="navbar-item">
 
-            <Link to='/modules'>
+            <Link to='/modules' className="navbar-link">
                 Modules
             </Link>
     </li>
@@ -30,7 +30,7 @@ export const NavBar = () => {
 
     <li className="navbar-item">
 
-        <Link to='/books'>
+        <Link to='/books' className="navbar-link">
             Books
         </Link>
         
@@ -38,23 +38,15 @@ export const NavBar = () => {
 
         <li className="navbar-item">
 
-            <Link to='/assignments'>
+            <Link to='/assignments' className="navbar-link">
                 Assignments
             </Link>
             
         </li>
 
         <li className="navbar-item">
-
-            <Link to='/posts'>
-                Posts
-            </Link>
-            
-        </li>
-
-        <li className="navbar-item">
             <Link
-            to='/resources'>
+            to='/resources' className="navbar-link">
                  Resources
             </Link>
            

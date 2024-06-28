@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
 import  {useState} from "react"
 import { getUserByEmail } from "../../services/UserService.jsx"
-
+import "./Login.css"
 
 
 
