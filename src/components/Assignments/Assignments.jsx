@@ -23,8 +23,17 @@ export const AssignmentList = () => {
                 return <div key={assignmentObj.id}>
                
                     <div>
-                        <h2 className="section.assignment">{assignmentObj.title}</h2>
-                        <h3 className="assignment-info">Description of Assignment goes Here</h3>
+                        <h2 className="section.assignment"
+                         >{assignmentObj.title}
+                         </h2>
+                        <img 
+                        src={assignmentObj.referenceImage} 
+                        alt="picture" 
+                        width="200" 
+                        height ="200">                            
+                         </img>
+                        <h3 className="assignment-info">{assignmentObj.description}</h3>
+                       
                     </div>
 
                 

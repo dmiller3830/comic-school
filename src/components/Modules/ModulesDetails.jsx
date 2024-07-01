@@ -75,12 +75,24 @@ export const ModuleDetails = () => {
         <div className="container-module">
         <h1 className="module-header">{moduleDetails.name}</h1>
      <h2 className="modules">Books:</h2>
+     
      <div>
         <div className="section-module">
            
         {userBooks.map((userBook) => {
-           return <BookModule key={userBook.id} userBook={userBook} getAndSetBooks={getAndSetBooks}/> })}
-      
+           return <BookModule key={userBook.id} userBook={userBook} getAndSetBooks={getAndSetBooks}
+         
+           
+           
+           
+           /> })}
+
+
+     
+
+
+
+
         </div>
        
      </div>

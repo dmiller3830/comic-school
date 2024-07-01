@@ -22,8 +22,16 @@ export const ResourceList = () => {
 
                     <div>
                         <h2 className="resource">{resourceObj.name}</h2>
-                        <h3 className="resource-info">Description of Resource Goes here</h3>
-
+                        <h3 className="resource-info">{resourceObj.description}</h3>
+                        <a href={resourceObj.link} target="_blank">
+                        <img 
+                        border="0"
+                        alt="pic"
+                        src={resourceObj.image}
+                        width="100"
+                        height="100">
+                         </img>
+                        </a>
                     </div>
 
 

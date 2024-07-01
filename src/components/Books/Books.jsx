@@ -27,8 +27,18 @@ export const BookList = () => {
                 return <div key={bookObj.id}>
                
                     <div >
+                    
                         <h2 className="section.book">{bookObj.title}</h2>
-                       <h3 className="book-info">Description of Book goes here</h3>
+                        <a href={bookObj.link} target="_blank">
+                        <img 
+                        border="0" 
+                        alt="bookpic" 
+                        src={bookObj.image} 
+                        width="100" 
+                        height="100">
+                        </img>
+                        </a>
+                        <h3>{bookObj.description}</h3>
                     </div>
 
                 

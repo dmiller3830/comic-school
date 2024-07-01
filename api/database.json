@@ -20,6 +20,18 @@
       "isStaff": false,
       "name": "Dan MIller",
       "id": 4
+    },
+    {
+      "email": "joeglass@email.com",
+      "name": "Joe Glass",
+      "isStaff": false,
+      "id": 5
+    },
+    {
+      "email": "janetdammit@email.com",
+      "name": "Janet Dammit",
+      "isStaff": false,
+      "id": 6
     }
   ],
   "books": [
@@ -27,95 +39,105 @@
       "id": 1,
       "title": "Comics and Sequential Art",
       "link": "https://www.amazon.com/Comics-Sequential-Art-Principles-Instructional/dp/0393331261/ref=sr_1_1?crid=SEDHZE6RLRVS&dib=eyJ2IjoiMSJ9.V8enY7Q4Dn1DC4ANY52uSRhCgubkCGo8qeybK73L9P0uwx8Ockz09fEL7k8OT9-5SaIwDrg5N8lT4frsclPMSVNgc_FVRgmhksDAF-Hy2oqZlkHQR2EQwexKYe3PnIzLfRHgJSM0wjDM7kgvZDd-dSCh4EG_Ol-BNoojjflKr2tCT9JOdhGHlj8tpiEGWWQ8jFLgVOMx_Sof2AhmJBqm2FerkpCIXJV37CWFzCCe7mw.79pbUA4gBASBfCdKbklXgYvTjYVLClJ1tSyiXPSopqA&dib_tag=se&keywords=comics+and+sequential+art+by+will+eisner&qid=1719496466&sprefix=Comics+And+Se%2Caps%2C87&sr=8-1",
-      "image": "",
-      "description": ""
+      "image": "https://m.media-amazon.com/images/I/51uO6zfMoGL._SX342_SY445_.jpg",
+      "description": "Will Eisner is one of the twentieth century's great American artists, a man who pioneered the field of comic arts. Here, in his classic Comics and Sequential Art, he refines the art of graphic storytelling into clear, concise principles that every cartoonist, comic artist, writer, and filmmaker meeds to know. Adapted from Eisner's landmark course at New York's School of Visual Arts, Comics and Sequential Art is an essential text filled with invaluable theories and easy-to-use techniques. Eisner reveals here the fundamentals of graphic storytelling. He addresses dialogue, anatomy, framing, and many other important aspects of the art form. Fully updated and revised to reflect current practices and technology, including a section on digital media, this introduction to the art of comics is as valuable a guide as it was when first published."
     },
     {
       "id": 2,
       "title": "Figure Drawing for All Its Worth",
       "link": "https://www.amazon.com/Figure-Drawing-All-Its-Worth/dp/0857680986/ref=sr_1_4?crid=1TABZGNKKJGKR&dib=eyJ2IjoiMSJ9.8oD0bdFWNfQs1yEc_5vEIhEIwXlJ_bvM601vnNO_imgkC-eRS4DaH1TuKF7NF0SmKGcuzps9AueToG9k80cNA8uIOEJLtmpO3G4Lb5EPJOo5EDl6MaqcvxuJHxFET68eWYzUmlGwwQOBPQRbYK7Wkrzb8_IKQFEpOrLs8Q4vueZwYasmtE-MtvtmhJN4NbG7XudkQw1wq9AjbzoOcFsHUuFLyEXnZu9LYA6IFSKSZp0.fK0Sr4fuA7OGvCVocmXTHlPC8DBRkec8E1layeW92e8&dib_tag=se&keywords=figure+drawing+for+all+its+worth&qid=1719496378&sprefix=Figure+Drawing+for+All+its+Worth%2Caps%2C83&sr=8-4",
-      "image": "",
-      "description": ""
+      "image": "https://m.media-amazon.com/images/I/71RNnkcTdhL._SY466_.jpg",
+      "description": "The illustrator Andrew Loomis (1892-1959) is revered among artists - including comics superstar Alex Ross - for his mastery of figure drawing and clean, Realist style. His hugely influential series of art instruction books have never been bettered, and Figure Drawing is the first in Titan's programme of facsimile editions, returning these classic titles to print for the first time in decades."
     },
     {
       "id": 3,
       "title": "Dynamic Figure Drawing",
       "link": "https://www.amazon.com/Dynamic-Figure-Drawing-Burne-Hogarth/dp/0823015777/ref=sr_1_1?crid=105X2KBB1UYAT&dib=eyJ2IjoiMSJ9.MUkYJQftXwXZuqZzfvdmTM0ffdqS3a_IRrRozByXt_0h2cI6D0ZjUX3_Jp0EpcJRus4Dh824zirjURuUTYxNE2N4_dr5vtmeQz3at-uGM4C7_VKi9cx_h5ooY69qlT4wXlUndqlg7I3BFhYtNdsfHXBPJqf9mMFgbwsVJQZiU3jIFpyO7VpLppDeO26PmQPPK0rmuzWxaDBRlih4QQwbPX26-ZRj59bMDE06uQeAt68.wDd1JGdr0A4GmkKLQ_qsJqva3yzUwehVqGVXkVUyHWQ&dib_tag=se&keywords=dynamic+figure+drawing&qid=1719496420&sprefix=Dynamic+Figu%2Caps%2C85&sr=8-1",
-      "image": "",
-      "description": ""
+      "image": "https://m.media-amazon.com/images/I/61W9jruYmzL._SL1200_.jpg",
+      "description": "Figure drawing is the most essential--and the most difficult--of all skills for the artist to learn. In this book, Bruce Hogarth, one of the founders of the School of Visual Arts in New York, introduces his own revolutionary system of figure drawing, which makes it possible to visualize and accurately render the forms of the human body from every conceivable point of view. 300+ drawings & diagrams."
     },
     {
       "id": 4,
       "title": "How to Draw Comics the Marvel Way",
       "link": "https://www.amazon.com/How-Draw-Comics-Marvel-Way/dp/0671530771/ref=sr_1_1?crid=MRBQQ7L0XV5L&dib=eyJ2IjoiMSJ9.-qF2h7efkKIcs2IQR7Y_Fg2hQeDTWonYlGngYs7cYqyDBoNypV-V2Yt0I69ox3VcUeEleR83fYkRxD3p1ygMJj7KLu43JM-Ry7CZRekicu2FEuRwbYLS41JGaa_FQ-2KJw0CusXtodkJ6SRkQ4qM5gmuMmz8p7aN-XPDdMsDQt3i4F9oGIsLRcFIJbxnK3UjBwiXl0yCpewwXez0qufTR25ZKgcoLCBq5jNWP6O667c.EXs0R4D6aDlf7Eld2YmSuhqhDiUusefz2hdR6SM6N9I&dib_tag=se&keywords=how+to+draw+comics+the+marvel+way&qid=1719496328&sprefix=How+to+Draw+Comic%2Caps%2C87&sr=8-1",
-      "image": "",
-      "description": ""
+      "image": "https://m.media-amazon.com/images/I/8125YqX-awL._SL1500_.jpg",
+      "description": "Stan Lee, the Mighty Man from Marvel, and John Buscema, active and adventuresome artist behind the Silver Surfer, Conan the Barbarian, the Mighty Thor and Spider-Man, have collaborated on this comics compendium: an encyclopedia of information for creating your own superhero comic strips. Using artwork from Marvel comics as primary examples, Buscema graphically illustrates the hitherto mysterious methods of comic art. Stan Lee’s pithy prose gives able assistance and advice to the apprentice artist. Bursting with Buscema’s magnificent illustrations and Lee’s laudable word-magic, How to Draw Comics the Marvel Way belongs in the library of everyone who has ever wanted to illustrate his or her own comic strip."
     },
     {
       "id": 5,
       "title": "Wizard: How to Draw: The Best of Basic Training Vol: 1",
       "link": "https://www.amazon.com/How-Draw-Best-Basic-Training/dp/0976287404/ref=sr_1_5?crid=3VTCW7YL1Z3PO&dib=eyJ2IjoiMSJ9.i2KCVEfByT9zUbfsK_JMiBSyxwwOt__dv-JJNN1uAh9f9xdjNEEFf_2lPsNNeD38ubCT_I6N7ThTAtyz5axqg9AS-02RaHMsg9kIi7RlYAIIZ6cX1NDLXW7ovCp9ruEgIt5rkkhZv3_6n971IyptlSjF2IzyBjdbA88t7a6upePcXNCvCt22-w4bJl1k6fTG3iXv7zBvop1SFRUX55qEzztw6EYHFeTga69CzsPPXBA.38FwexkRcY4SIAPH83Pu6BwcXj4m6aET84zGScrFMSc&dib_tag=se&keywords=Wizard+How+to+Draw&qid=1719496756&sprefix=wizard+how+to+draw%2Caps%2C79&sr=8-5",
-      "image": "",
-      "description": ""
+      "image": "https://m.media-amazon.com/images/I/51ngpYghgSL.jpg",
+      "description": "This giant 256-page book collects the best and most instructional HOW TO DRAW lessons from Wizard: The Comics Magazines 14-year history. LEARN SECRETS FROM THE GREATEST ARTISTS IN COMICS! Jim Lee, Michael Turner, George Pérez, Joe Kubert, Adam Hughes, Greg Land, Frank Cho, Joe Linsner, Greg Horn, Walt Simonson, Doug Mahnke, Darick Robertson, Gary Frank, Sean Chen, Dale Keown, Bart Sears, Pat Lee, Art Adams, Jim Califiore, Phil Jimenez, Matt Haley, Tom Raney, Kevin Maguire and many, many more! OVER 50 ART LESSONS ON ALL ASPECTS OF COMIC ARTWORK! Anatomy, Facial Expressions, Body Language, Layout, Perspective, Movement & Motion, Proportions, Shadows, Backgrounds, Storytelling, Coloring, Dynamic Foreshortening, Photo Reference, Sex Appeal, Inking, Sound Effects, Metallic Surfaces, Textures, Energy Effects, Negative Space, Teens/Children, Action Scenes and sooo much more! Plus, get additional resources on the Tools of the Trade, Professional Tips and Mistakes to Avoid, How to Break into the Business and a sample script to practice on by Brian Michael Bendis. THIS BOOK IS DESIGNED FOR BOTH THE ASPIRING ARTIST AND THE INTERESTED FAN! The greatest artists, who have been creating your favorite comic books for Marvel, DC and Image Comics, wrote this book. See how they illustrate the techniques used in comic storytelling and be enlightened by hundreds of years of artistic expertise."
     }
   ],
   "assignments": [
     {
       "id": 1,
       "title": "Three Panel Fairy Tale",
-      "reference-image": "",
-      "description": ""
+      "referenceImage": "https://francisbonnet.com/archive/sft/wp-content/uploads/2022/06/2022-06-16.jpg",
+      "description": "Choose a fairy tale and try to tell the story in 3 panels: One panel for the beggining, one panel for the middle and one panel for the end. If you can't fit the whole story in 3 panels, pick one scene from the fairy and try to break it down into a 3 panel sequence. For extra credit and more advanced students expand on each panel and go deeper into the story: 3 panels for your beginning, 3 panels for your middle and 3 panels for the end. "
     },
     {
       "id": 2,
       "title": "Trace, Copy, Rinse, Repeat!",
-      "reference-image": "",
-      "description": ""
+      "referenceImage": "https://preview.redd.it/noei275tv1q71.jpg?auto=webp&s=078653cd821e30fb54c7fe08cd1625489edd3757",
+      "description": "Get some photo reference and some tracing paper and a pencil. Trace the photo and break it down into its simple shapes and parts. Then copy what you traced free using both the picture and your tracing as a reference. Continue and repeat. For extra credit and more advanced students get several photos of the same subject or object but from different angles. Trace and Copy and repeat, then draw the same thing completely from invention and make some changes."
     },
     {
       "id": 3,
       "title": "Warm Ups",
-      "reference-image": "",
-      "description": ""
+      "referenceImage": "https://www.pyd.studio/wp-content/uploads/sites/9/2014/01/dl14warmup2.jpg",
+      "description": "There are many warmups you can do at the beginning of your drawing session that include drawing straight lines, circles and elipses, basic 2d shapes and also 3d geometric shapes. "
     },
     {
       "id": 4,
       "title": "3 Step Action:AIF",
-      "reference-image": "",
-      "description": ""
+      "referenceImage": "https://imgb.ifunny.co/images/484ae1a1343a04fc07d27a2e703ba38253cdb3fce734cbcb5436a59d74324834_1.webp",
+      "description": "Think of an action and break it down into 3 steps: The anticipation, the impact and the after math or follow through. The action can be anything from throwing a ball, to jumping over something or throwing a punch the important thing is to try to envision action and movement in a sequence of poses that convey a build up or wind up, the action itself, and the follow through or after math. For extra credit break it down into even more steps than just three and take and action and try to express in fewer steps than 3"
     },
     {
       "id": 5,
       "title": "3 Panel Jokes",
-      "reference-image": "",
-      "description": ""
+      "referenceImage": "https://miro.medium.com/v2/resize:fit:4800/format:webp/0*Gau8rAIKGC2ypa3O",
+      "description": "Think of a joke or a gag and turn it into a 3 panel comic. Think in terms of Set Up, Pause and punchline. How can you take a knock knock joke and turn it into a comic."
     }
   ],
   "resources": [
     {
       "id": 1,
       "name": "Figure Drawing Proportions ",
-      "link": "https://www.udemy.com/course/figure-drawing-foundations-proportions/?couponCode=ST18MT62524"
+      "link": "https://www.udemy.com/course/figure-drawing-foundations-proportions/?couponCode=ST18MT62524",
+      "image": "https://public-files.gumroad.com/0r8ynubicowxnevxkm9hvu0qddhr",
+      "description": "A solid and essential class in figure drawing that can help establish a good foundation in proportions. Also this course has several lessons that go into practical procedures for drawing thumbnails and simplifying the figure in the developement of storyboards for your comics"
     },
     {
       "id": 2,
       "name": "How to Draw BASICS for Kids and Beginners",
-      "link": "https://www.udemy.com/course/how-to-draw-basics-for-kids/?couponCode=ST18MT62524 "
+      "link": "https://www.udemy.com/course/how-to-draw-basics-for-kids/?couponCode=ST18MT62524 ",
+      "image": "https://d3f1iyfxxz8i1e.cloudfront.net/courses/course_image/e3062d7cee0e.jpeg",
+      "description": "A good introductory course on Basic Drawing skills that can act as a good primer and solid foundation for more advanced concepts found in the books."
     },
     {
       "id": 3,
       "name": "How to Draw Backgrounds and Perspective-Essential Course",
-      "link": "https://www.udemy.com/course/drawing-backgrounds-and-learning-perspective/?couponCode=ST18MT62524"
+      "link": "https://www.udemy.com/course/drawing-backgrounds-and-learning-perspective/?couponCode=ST18MT62524",
+      "image": "https://ramstudioscomics.com/wp-content/uploads/2022/08/Drawing_a_Background_Step_4.jpg",
+      "description": "An essential courase for developing a foundation in perspective drawing which is the most key and fundamental skill in making comics"
     },
     {
       "id": 4,
       "name": "How to Actually Practice Composition as a Beginner",
-      "link": "https://www.youtube.com/watch?v=2NbGy2cMEFg&list=PLgXx6QkuHGjI57H1gUcR6Yrm_kkB4xth9&index=3"
+      "link": "https://www.youtube.com/watch?v=2NbGy2cMEFg&list=PLgXx6QkuHGjI57H1gUcR6Yrm_kkB4xth9&index=3",
+      "image": "https://cdnb.artstation.com/p/assets/images/images/026/309/721/large/tim-mcburnie-incarnate-keyframe-ogrebattle-color-01.jpg?1588437916",
+      "description": "This and many other youtube videos by Tim McBurnie are excellent lectures for anyone wanting to learn the art of storytelling through visual media. This lecture in particular takes you step by step into the creative process for developing storyboards and compositions. "
     },
     {
       "id": 5,
       "name": "How To Get Started Learning How To Draw Comics",
-      "link": "https://www.youtube.com/watch?v=DMmsydblf7s&t=446s"
+      "link": "https://www.youtube.com/watch?v=DMmsydblf7s&t=446s",
+      "image": "https://m.media-amazon.com/images/I/8125YqX-awL._SL1500_.jpg",
+      "description": "In this youtube Video David Finch cuts thorugh much of the fluff and gives you a solid jump start that will allow you to dive straight in and start drawing characters and figures. A good supplament for How to Draw Comics the Marvel Way."
     }
   ],
   "modules": [
@@ -178,6 +200,16 @@
       "userId": 1,
       "name": "Test Test Test",
       "id": 13
+    },
+    {
+      "userId": 5,
+      "name": "Perspective Drawing",
+      "id": 14
+    },
+    {
+      "userId": 6,
+      "name": "Perspective Drawing",
+      "id": 15
     }
   ],
   "assignment-modules": [
@@ -210,6 +242,24 @@
       "assignmentId": 4,
       "moduleId": "1",
       "id": 7
+    },
+    {
+      "userId": 1,
+      "assignmentId": 4,
+      "moduleId": "4",
+      "id": 8
+    },
+    {
+      "userId": 5,
+      "assignmentId": 4,
+      "moduleId": "14",
+      "id": 9
+    },
+    {
+      "userId": 6,
+      "assignmentId": 2,
+      "moduleId": "15",
+      "id": 10
     }
   ],
   "book-modules": [
@@ -248,6 +298,24 @@
       "bookId": 5,
       "moduleId": "1",
       "id": 8
+    },
+    {
+      "userId": 1,
+      "bookId": 1,
+      "moduleId": "4",
+      "id": 9
+    },
+    {
+      "userId": 5,
+      "bookId": 4,
+      "moduleId": "14",
+      "id": 10
+    },
+    {
+      "userId": 6,
+      "bookId": 1,
+      "moduleId": "15",
+      "id": 11
     }
   ],
   "resource-modules": [
@@ -270,6 +338,27 @@
       "moduleId": "1",
       "resourceId": 1,
       "id": 5
+    },
+    {
+      "userId": 1,
+      "bookId": 0,
+      "moduleId": "4",
+      "resourceId": 5,
+      "id": 6
+    },
+    {
+      "userId": 5,
+      "bookId": 0,
+      "moduleId": "14",
+      "resourceId": 5,
+      "id": 7
+    },
+    {
+      "userId": 6,
+      "bookId": 0,
+      "moduleId": "15",
+      "resourceId": 4,
+      "id": 8
     }
   ],
   "bulletinPosts": [

@@ -49,6 +49,7 @@ export const ModuleList = ({currentUser}) => {
             moduleAssignment={moduleAssignment}
             moduleBook={moduleBook}
             setModules={setModules} /></>
+            
 
           
            
@@ -63,7 +64,10 @@ export const ModuleList = ({currentUser}) => {
         onClick={() => {Navigate("/modules/create")}}>
             Create
         </button>
-       
+        <button 
+          onClick={()=>console.log(modules)}>
+            Test
+          </button>
 </div>
    
     )

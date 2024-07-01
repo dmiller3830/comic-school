@@ -32,7 +32,7 @@ export const Module = ({moduleObj, moduleAssignment, moduleBook, currentUser, se
             {currentModuleAssignment.map(singleAssignment =>{
                 return <>
                 
-             {singleAssignment.assignment?.title}
+             {singleAssignment?.assignment?.title}
                 
                 
                 </>
@@ -43,7 +43,7 @@ export const Module = ({moduleObj, moduleAssignment, moduleBook, currentUser, se
             Book:
             {currentModuleBook.map(singleBook => {
                 return<>
-                {singleBook.book.title}
+                {singleBook?.book.title}
                 
                 </>
             })}
@@ -53,7 +53,7 @@ export const Module = ({moduleObj, moduleAssignment, moduleBook, currentUser, se
             onClick={() => {navigate(`${moduleObj.id}`)}}>
                 Details
             </button>
-          
+         
         </div>
         
       
