@@ -9,9 +9,11 @@ export const ModuleList = ({currentUser}) => {
     const [ modules, setModules] = useState([])
     const [moduleAssignment, setModuleAssignment] = useState([])
     const [moduleBook, setModuleBook] = useState([])
+    const localcomicUser = localStorage.getItem("comic_user")
+    const comicUserObj = JSON.parse(localcomicUser)
 
     useEffect(() => {
-        getModulesByUser(currentUser.id).then(moduleArray => {
+        getModulesByUser(comicUserObj.id).then(moduleArray => {
             setModules(moduleArray)
         })
     },[currentUser])
@@ -21,7 +23,7 @@ export const ModuleList = ({currentUser}) => {
 
 
     useEffect(() => {
-        getAssignmentByUser(currentUser.id).then(assignmentArray =>{
+        getAssignmentByUser(comicUserObj.id).then(assignmentArray =>{
             const moduleAssignments = assignmentArray.filter(assignment => assignment.userId === currentUser.id)
             setModuleAssignment(moduleAssignments)
 
@@ -30,7 +32,7 @@ export const ModuleList = ({currentUser}) => {
     },[currentUser])
 
     useEffect(() => {
-        getBookByUser(currentUser.id).then(bookArray => {
+        getBookByUser(comicUserObj.id).then(bookArray => {
             const moduleBook = bookArray.filter(book => book.userId === currentUser.id)
             setModuleBook(moduleBook)
         })
@@ -43,9 +45,11 @@ export const ModuleList = ({currentUser}) => {
 
         <div className="module-header">
         <h1>Modules </h1>
+
+        <div className="modules">
         {modules.map(moduleObj => {
             return<> <Module moduleObj={moduleObj}
-            currentUser={currentUser}
+            currentUser={comicUserObj}
             moduleAssignment={moduleAssignment}
             moduleBook={moduleBook}
             setModules={setModules} /></>
@@ -56,7 +60,7 @@ export const ModuleList = ({currentUser}) => {
          
         })}
 
-          
+</div>
        
          <div>
 </div>
@@ -64,10 +68,7 @@ export const ModuleList = ({currentUser}) => {
         onClick={() => {Navigate("/modules/create")}}>
             Create
         </button>
-        <button 
-          onClick={()=>console.log(modules)}>
-            Test
-          </button>
+       
 </div>
    
     )

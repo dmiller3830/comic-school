@@ -11,7 +11,7 @@ export const AddBookList = ({currentUser}) => {
     const [newBook, setNewBook] = useState({
         userId:0, 
         bookId:0, 
-        moduleId:moduleId.moduleId
+        moduleId:parseInt(moduleId.moduleId)
     })
     const [addBook, setAddBook] = useState([])
         useEffect(() => {
@@ -42,6 +42,15 @@ export const AddBookList = ({currentUser}) => {
 
                         <li>
                             <h2>{singleBook.title}</h2>
+                            <img 
+                        border="0" 
+                        alt="bookpic" 
+                        src={singleBook.image} 
+                        width="500" 
+                        height="500">
+                        </img>
+                        <h3>{singleBook.description}</h3>
+
                             <button
                             onClick={()=>handleAddBook(singleBook.id)}
                             >Add</button>

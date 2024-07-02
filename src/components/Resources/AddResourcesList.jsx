@@ -12,7 +12,7 @@ export const AddResourceList = ({currentUser}) => {
     const [newResource, setNewResource] = useState({
         userId:0,
         bookId:0,
-        moduleId:moduleId.moduleId
+        moduleId:parseInt(moduleId.moduleId)
     })
 
     const [addResource, setAddResource] = useState([])
@@ -41,10 +41,18 @@ export const AddResourceList = ({currentUser}) => {
 
                         <li>
                             <h2>{singleResource.name}</h2>
+                            <img 
+                        border="0"
+                        alt="pic"
+                        src={singleResource.image}
+                        width="500"
+                        height="500">
+                         </img>
                             <button
                             onClick={()=>handleAddResource(singleResource.id)}>
                                 Add
                             </button>
+                            <h3 className="resource-info">{singleResource.description}</h3>
                         </li>
 
 

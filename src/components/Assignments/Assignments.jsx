@@ -29,8 +29,8 @@ export const AssignmentList = () => {
                         <img 
                         src={assignmentObj.referenceImage} 
                         alt="picture" 
-                        width="200" 
-                        height ="200">                            
+                        width="500" 
+                        height ="500">                           
                          </img>
                         <h3 className="assignment-info">{assignmentObj.description}</h3>
                        

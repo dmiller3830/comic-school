@@ -29,7 +29,9 @@ section.book {
 
 .book-info {
     color: var(--info);
-    font-family: "Roboto", sans-serif;
+    font-family: "Georgia", serif;
+    font-size: 20px;
+    font-weight: normal;
 
 }
 

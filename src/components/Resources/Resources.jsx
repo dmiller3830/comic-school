@@ -28,8 +28,8 @@ export const ResourceList = () => {
                         border="0"
                         alt="pic"
                         src={resourceObj.image}
-                        width="100"
-                        height="100">
+                        width="500"
+                        height="500">
                          </img>
                         </a>
                     </div>

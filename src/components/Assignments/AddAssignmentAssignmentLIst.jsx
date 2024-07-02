@@ -10,7 +10,7 @@ export const AddAssignmentList = ({currentUser}) => {
     const [newAssignment, setNewAssignment] = useState({
         userId:0,
         assignmentId:0, 
-        moduleId:moduleId.moduleId
+        moduleId:parseInt(moduleId.moduleId)
     })
      const [addAssignment, setAddAssignment] = useState([])
          useEffect(() => {
@@ -40,6 +40,13 @@ export const AddAssignmentList = ({currentUser}) => {
 
                         <li>
                             <h2>{singleAssignment.title}</h2>
+                            <img 
+                        src={singleAssignment.referenceImage} 
+                        alt="picture" 
+                        width="500" 
+                        height ="500">                           
+                         </img>
+                         <h3 className="assignment-info">{singleAssignment.description}</h3>
                             <button
                             onClick={()=>handleAddAssignment(singleAssignment.id)}
                             >Add</button>

@@ -34,11 +34,11 @@ export const BookList = () => {
                         border="0" 
                         alt="bookpic" 
                         src={bookObj.image} 
-                        width="100" 
-                        height="100">
+                        width="500" 
+                        height="500">
                         </img>
                         </a>
-                        <h3>{bookObj.description}</h3>
+                        <h3 className="book-info">{bookObj.description}</h3>
                     </div>
 
                 

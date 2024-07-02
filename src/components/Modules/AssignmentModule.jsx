@@ -19,12 +19,18 @@ export const AssignmentModule =({userAssignment, getAndSetAssignments}) => {
            border="0" 
            alt="bookpic" 
            src={userAssignment?.assignment?.referenceImage} 
-           width="100" 
-           height="100">
+           width="300" 
+           height="300">
            </img>
 
-<h3>{userAssignment?.assignment?.description}</h3>
+
       
+   </div>
+
+   <div>
+   <h3
+   className="module-info">{userAssignment?.assignment?.description}</h3>
+
    </div>
 
    <div>

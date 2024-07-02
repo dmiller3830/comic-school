@@ -23,13 +23,19 @@ export const BookModule = ({userBook, getAndSetBooks}) => {
            border="0" 
            alt="bookpic" 
            src={userBook?.book?.image} 
-           width="100" 
-           height="100">
+           width="300" 
+           height="300">
            </img>
 
-<h3>{userBook?.book?.description}</h3>
       
    </div>
+
+   <div>
+    
+<h3 className="module-info">{userBook?.book?.description}</h3>
+
+</div>
+
     
     
     <div>

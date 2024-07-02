@@ -73,7 +73,7 @@ export const ModuleDetails = () => {
         <>
 
         <div className="container-module">
-        <h1 className="module-header">{moduleDetails.name}</h1>
+        <h1 className="modules">{moduleDetails.name}</h1>
      <h2 className="modules">Books:</h2>
      
      <div>

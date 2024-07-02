@@ -8,14 +8,17 @@ export const CreateModule = ({currentUser}) => {
 
         name:""
     })
-
-
+    const localcomicUser = localStorage.getItem("comic_user")
+    const comicUserObj = JSON.parse(localcomicUser)
     const navigate = useNavigate()
+
+
+    
     const handleCreate = (e) => {
         e.preventDefault()
         if (newModule.name )  {
             const newModuleCopy = {
-                userId: currentUser.id,
+                userId: comicUserObj.id,
                 name: newModule.name
             }
             CreateNewModule(newModuleCopy)

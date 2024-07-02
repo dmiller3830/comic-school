@@ -28,7 +28,7 @@ export const Module = ({moduleObj, moduleAssignment, moduleBook, currentUser, se
         
         </h2>
         <div className="module-info">
-        assignment:
+      
             {currentModuleAssignment.map(singleAssignment =>{
                 return <>
                 
@@ -40,7 +40,7 @@ export const Module = ({moduleObj, moduleAssignment, moduleBook, currentUser, se
         
         </div>
         <div className="module-info">
-            Book:
+            
             {currentModuleBook.map(singleBook => {
                 return<>
                 {singleBook?.book.title}

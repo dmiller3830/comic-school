@@ -25,7 +25,7 @@ export const Register = (props) => {
             })
           )
   
-          navigate("/")
+          navigate("/dashboard")
         }
       })
     }
